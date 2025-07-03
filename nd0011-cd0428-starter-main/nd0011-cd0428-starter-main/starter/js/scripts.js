@@ -1,4 +1,3 @@
-// دالة تصحيح المسار
 function fixImagePath(path) {
   if (!path) return 'starter/images/card_placeholder_bg.webp';
   return path.replace(/^(\.\.\/|\.\/)?images\//, 'starter/images/');
@@ -152,13 +151,14 @@ if (form) {
   });
 
   // Live character count
-  messageInput.addEventListener('input', function () {
-    const len = messageInput.value.length;
-    charactersLeft.textContent = `Characters: ${len}/300`;
-    if (len > 300) {
-      charactersLeft.classList.add('error');
-    } else {
-      charactersLeft.classList.remove('error');
-    }
-  });
+messageInput.addEventListener('input', function () {
+  const len = messageInput.value.length;
+  charactersLeft.textContent = `Characters: ${len}/300`;
+  if (len > 300) {
+    charactersLeft.classList.add('error');
+  } else {
+    charactersLeft.classList.remove('error');
+  }
+});
+
 }
